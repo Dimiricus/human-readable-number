@@ -38,7 +38,7 @@ module.exports = function toReadable (number) {
 
         case 3 :
 
-            let hundred = readableNumbers[0][+strNumber[0]] + ' hundred '; 
+            let hundred = readableNumbers[0][+strNumber[0]] + ' hundred'; 
 
             if (+strNumber[1] === 0) {
                 if (+strNumber[2] === 0) {
@@ -46,22 +46,22 @@ module.exports = function toReadable (number) {
                 } 
                 else 
                 {
-                    returnNumber = hundred + readableNumbers[0][+strNumber[2]];
+                    returnNumber = hundred + ' ' + readableNumbers[0][+strNumber[2]];
                 }
             }
             else 
             {
                 if (+strNumber[2] === 0) {
-                    returnNumber = hundred + readableNumbers[1][+strNumber[1]];
+                    returnNumber = hundred + ' ' + readableNumbers[1][+strNumber[1]];
                 }
                 else 
                 {
                     if (+strNumber[1] === 1) {
-                        returnNumber = hundred + readableNumbers[0][ +(strNumber[1] + strNumber[2]) ];
+                        returnNumber = hundred + ' ' + readableNumbers[0][ +(strNumber[1] + strNumber[2]) ];
                     }
                     else 
                     {
-                        returnNumber = hundred + readableNumbers[1][+strNumber[1]] + ' ' + readableNumbers[0][+strNumber[2]];
+                        returnNumber = hundred + ' ' + readableNumbers[1][+strNumber[1]] + ' ' + readableNumbers[0][+strNumber[2]];
                     }
                 }
             }
